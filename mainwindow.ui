@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>202</width>
-    <height>518</height>
+    <height>354</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -873,8 +873,14 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
         <height>32</height>
        </size>
       </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
       <property name="inputMethodHints">
        <set>Qt::ImhNone</set>
+      </property>
+      <property name="text">
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
