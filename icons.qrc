@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/ico_backspace.png</file>
+        <file>img/ico_equal.png</file>
+        <file>img/ico_swapModes.png</file>
+    </qresource>
+</RCC>
