@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     pMainWindow = this;
+    mathClass = new BasicMath(this);
 }
 
 MainWindow::~MainWindow()
@@ -167,7 +168,7 @@ void MainWindow::on_powButton_clicked()
 void MainWindow::on_sqrtButton_clicked()
 {
     QString currentText = ui->inputField->text();
-    ui->inputField->setText(currentText+"√");
+    ui->inputField->setText(currentText+"√(");
 }
 
 void MainWindow::on_factorialButton_clicked()
@@ -186,4 +187,25 @@ void MainWindow::on_piButton_clicked()
 {
     QString currentText = ui->inputField->text();
     ui->inputField->setText(currentText+"π");
+}
+
+void MainWindow::on_resultButton_clicked()
+{
+    double result = mathClass->showResult(ui->inputField->text());
+    ui->inputField->clear();
+    qDebug()<<"RESULT: "<<result;
+}
+
+void MainWindow::on_inputField_textChanged(const QString &arg1)
+{
+    double result = mathClass->showResult(ui->inputField->text());
+    if(result==result)
+    {
+        ui->resultShowField->setHtml("<font color=\"Gray\">="+QString::number(result)+"</font><br>");
+    }
+    else
+    {
+        ui->resultShowField->setHtml("<font color=\"Gray\">=</font><br>");
+    }
+    ui->resultShowField->setAlignment(Qt::AlignRight);
 }

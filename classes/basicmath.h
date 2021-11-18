@@ -2,21 +2,21 @@
 #define BASICMATH_H
 
 #include <QObject>
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include <QDebug>
+#include <QJSEngine>
+#include <QtMath>
 
-class MainWindow;
 
 class BasicMath : public QObject
 {
     Q_OBJECT
 public:
     explicit BasicMath(QObject *parent = nullptr);
+    double showResult(QString inputField);
 
 signals:
 
 private:
-    MainWindow * mainWindow;
 
 };
 
